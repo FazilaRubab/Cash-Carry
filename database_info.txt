@@ -1,0 +1,44 @@
+
+create databse billing.
+
+################################ FOR CREATING DATABASE TABLES USE IN PROJECT #########################
+create table user_register(
+   f_name VARCHAR(50) NOT NULL,
+   l_name VARCHAR(50) NOT NULL,
+   email VARCHAR(100) NOT NULL,
+   question VARCHAR(50) NOT NULL,
+   answer VARCHAR(100) NOT NULL,
+   password VARCHAR(50) NOT NULL,
+   PRIMARY KEY ( email )
+);
+
+create table admin_register(
+   f_name VARCHAR(50) NOT NULL,
+   l_name VARCHAR(50) NOT NULL,
+   email VARCHAR(100) NOT NULL,
+   question VARCHAR(50) NOT NULL,
+   answer VARCHAR(100) NOT NULL,
+   password VARCHAR(50) NOT NULL,
+   PRIMARY KEY ( email )
+);
+
+create table stock_product(
+id_no int NOT NULL AUTO_INCREMENT,
+category VARCHAR(50) NOT NULL,
+item_name VARCHAR(100) NOT NULL,
+price VARCHAR(50) NOT NULL,
+quantity VARCHAR(100) NOT NULL,
+photo BLOB NOT NULL,PRIMARY KEY ( id_no ));
+
+create table bill_data(
+id_no int NOT NULL AUTO_INCREMENT,
+bill_id VARCHAR(50) NOT NULL,
+user_name VARCHAR(50) NOT NULL,
+item_name VARCHAR(100) NOT NULL,
+price VARCHAR(50) NOT NULL,
+quantity VARCHAR(100) NOT NULL,PRIMARY KEY ( id_no ));
+
+
+
+########################################### FOR INSERTING NEW ADMIN IN DATABASE #####################
+insert into admin_register(f_name,l_name,email,question,answer,password)values('Ali','Ibtisam','aliibtisam1@gmail.com','Your first teacher name','mama','12345');
